@@ -18,6 +18,7 @@ Hobby projects built in kRPC. kRPC is a Remote Procedure Call library built for 
 ## Misc
 Matplotlib
 - [How to plot multiple lines with legend](http://matplotlib.org/1.3.0/examples/pylab_examples/legend_demo.html)
+
 CSV module
 - [Official documentation](https://docs.python.org/2/library/csv.html)
 - [Tutorials](http://www.pythonforbeginners.com/systems-programming/using-the-csv-module-in-python/)
