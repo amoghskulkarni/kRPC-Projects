@@ -3,12 +3,17 @@ import time
 import PID
 import csv
 
+data_dictionary_list = [{'filename': "output/data1.csv", 'pid_settings': (0.4, 0.02, 0.01)},
+                        {'filename': "output/data2.csv", 'pid_settings': (0.2, 0.05, 0.025)},
+                        {'filename': "output/data3.csv", 'pid_settings': (0.4, 0.1, 0.05)},
+                        ]
+data_dictionary_list_index = 2
+
 if __name__ == "__main__":
-    with open("output/data.csv", "w") as csvfile:
+    with open(data_dictionary_list[data_dictionary_list_index]['filename'], "w") as csvfile:
         conn = krpc.connect(name='Hello World')
         vessel = conn.space_center.active_vessel
         writer = csv.writer(csvfile)
-        timestamp = 0.0
 
         # UI element for displaying a value in the game
         canvas = conn.ui.stock_canvas
@@ -34,7 +39,8 @@ if __name__ == "__main__":
             writer.writerow(['0', '0.0', '0.0'])
 
         # PID controller initialization
-        pid_controller = PID.PID(P=0.4, I=0.02, D=0.01)
+        pid_settings = data_dictionary_list[data_dictionary_list_index]['pid_settings']
+        pid_controller = PID.PID(P=pid_settings[0], I=pid_settings[1], D=pid_settings[2])
         pid_controller.setSetpoint(1)                       # target_velocity / target_velocity
         pid_controller.update(feedback_value=0)
         pid_initial_output = pid_controller.output
@@ -44,15 +50,15 @@ if __name__ == "__main__":
         vessel.auto_pilot.target_pitch_and_heading(90, 90)
         vessel.auto_pilot.engage()
 
-        # Full throttle
-        vessel.control.throttle = 0.5
+        # No throttle
+        vessel.control.throttle = 0.0
 
         # Lift-off!
         print("Lift-off!")
         vessel.control.activate_next_stage()                # Equivalent to pressing space, highest (lift-off) stage
         time.sleep(0.25)
         # Log
-        writer.writerow(['1', str(vessel.flight(vessel.orbit.body.reference_frame).speed), str(vessel.control.throttle)])
+        writer.writerow(['1', str(vessel.flight(vessel.orbit.body.reference_frame).speed), str(0.0)])
 
         previous_feedback = 0
         current_feedback = 0
@@ -73,7 +79,7 @@ if __name__ == "__main__":
             # Log
             writer.writerow(['1',
                              str(vessel.flight(vessel.orbit.body.reference_frame).speed),
-                             str(vessel.control.throttle)])
+                             str(output)])
 
             # TODO: Include more robust algorithm to detect stability
             # If the speed is getting settled down, i.e. instantaneous differential of the feedback is close to 0
