@@ -4,7 +4,7 @@ import PID
 import csv
 
 if __name__ == "__main__":
-    with open("data.csv", "w") as csvfile:
+    with open("output/data.csv", "w") as csvfile:
         conn = krpc.connect(name='Hello World')
         vessel = conn.space_center.active_vessel
         writer = csv.writer(csvfile)
@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
         # PID controller initialization
         pid_controller = PID.PID(P=0.4, I=0.02, D=0.01)
-        pid_controller.setSetpoint(1)               # target_velocity / target_velocity
+        pid_controller.setSetpoint(1)                       # target_velocity / target_velocity
         pid_controller.update(feedback_value=0)
         pid_initial_output = pid_controller.output
         print("PID initial output - " + str(pid_initial_output))
