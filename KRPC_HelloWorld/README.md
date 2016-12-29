@@ -32,5 +32,16 @@ Results generated with different PID values are hard-coded in the code and store
 respective .csv files. Graphs are as follows -
 
 ![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data1.png "Graph 1")
-![alt text]("Graph 2")
+![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data2.png "Graph 2")
+
+Notice that above graphs are practically the same, but they are for different PID values.
+
 ![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data3.png "Graph 3")
+![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data4.png "Graph 4")
+
+0.4 and 0.02 seem to be magic values for P and I, for other combinations of P and I, 
+the rocket doesn't get stable in the given range of 5000m to 8000m. Need to think about
+that more. Plus, I should try to come up with the values for P and I using some standard
+method (like Zeigler-Nicholas etc.) instead of being haphazard about it. 
+
+P.S. - the value for speed is divided by 50 for better visualization purposes.
