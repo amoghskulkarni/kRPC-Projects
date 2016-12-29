@@ -4,10 +4,11 @@ import PID
 import csv
 
 data_dictionary_list = [{'filename': "output/data1.csv", 'pid_settings': (0.4, 0.02, 0.01)},
-                        {'filename': "output/data2.csv", 'pid_settings': (0.2, 0.05, 0.025)},
-                        {'filename': "output/data3.csv", 'pid_settings': (0.4, 0.1, 0.05)},
+                        {'filename': "output/data2.csv", 'pid_settings': (4.0, 0.2, 0.1)},
+                        {'filename': "output/data3.csv", 'pid_settings': (0.4, 0.1, 0.02)},
+                        {'filename': "output/data4.csv", 'pid_settings': (0.4, 0.1, 0.1)},
                         ]
-data_dictionary_list_index = 2
+data_dictionary_list_index = 3
 
 if __name__ == "__main__":
     with open(data_dictionary_list[data_dictionary_list_index]['filename'], "w") as csvfile:

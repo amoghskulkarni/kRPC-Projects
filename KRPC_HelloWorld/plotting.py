@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 
 from main import data_dictionary_list, data_dictionary_list_index
 
+data_dictionary_list_index = 1
+
 if __name__ == "__main__":
     # Plotting the results
     with open(data_dictionary_list[data_dictionary_list_index]['filename'], "rb") as csvfile:
