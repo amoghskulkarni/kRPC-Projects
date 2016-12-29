@@ -31,6 +31,6 @@ The PID library used can be found [here](https://github.com/ivmech/ivPID).
 Results generated with different PID values are hard-coded in the code and stored in
 respective .csv files. Graphs are as follows -
 
-P = 0.4, I = 0.02, D = 0.01
-
-![alt text]("Graph 1")
+![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data1.png "Graph 1")
+![alt text]("Graph 2")
+![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data3.png "Graph 3")
