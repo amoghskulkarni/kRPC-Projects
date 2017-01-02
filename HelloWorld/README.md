@@ -17,12 +17,12 @@ So, the system to be controlled is rocket, which takes "throttle" as the input f
 the controller and produces "speed" as the output and feeds it back to the controller,
 forming a closed loop system. Reference diagram is as follows -
 
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/pid_control.png "PID controller")
+![alt text](images/pid_control.png "PID controller")
 
 A simple 3 stage rocket is used for this task, which has 2 liquid fuel tanks attached to
-liquid fuel engine controlled from command pod. (.craft file can be found [here]())
+liquid fuel engine controlled from command pod. (.craft file can be found [here](krpc_test_hello_world.craft))
 
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/2016-12-25.png "The rocket")
+![alt text](images/2016-12-25.png "The rocket")
 
 The PID library used can be found [here](https://github.com/ivmech/ivPID).
 
@@ -31,13 +31,13 @@ The PID library used can be found [here](https://github.com/ivmech/ivPID).
 Results generated with different PID values are hard-coded in the code and stored in
 respective .csv files. Graphs are as follows -
 
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data1.png "Graph 1")
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data2.png "Graph 2")
+![alt text](images/data1.png "Graph 1")
+![alt text](images/data2.png "Graph 2")
 
 Notice that above graphs are practically the same, but they are for different PID values.
 
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data3.png "Graph 3")
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/data4.png "Graph 4")
+![alt text](images/data3.png "Graph 3")
+![alt text](images/data4.png "Graph 4")
 
 0.4 and 0.02 seem to be magic values for P and I, for other combinations of P and I, 
 the rocket doesn't get stable in the given range of 5000m to 8000m. Need to think about
