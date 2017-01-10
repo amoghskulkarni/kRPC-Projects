@@ -1,27 +1,20 @@
-# kRPC - Simple Multi-stage
-===========================
+# kRPC - Kerbin Survey Airplane
+===============================
 
 ## Objective
 ------------
-To use kRPC to complete one of the tests on Hammer Solid Rocket Booster (SRB).
-
-The test requirements are -
-
-  1. Altitude 51000m to 530000m
-  2. Speed 140.0m/s to 230.0m/s
+To use kRPC to complete some of the Kerbin Survey missions. In these missions, crew reports
+have to be taken after flying the craft to the desired location.
 
 ## Approach
 -----------
-Used PID controller to control the throttle by observing the speed of the rocket.
+Using PID controller to control the throttle and control surfaces of the aircraft
+for stabilizing the altitude and speed of aircraft above the ground. After stabilizing the
+craft, turn it towards the desired location using pitch and roll, and then stabilize again.
 
-An 8 stage rocket was built which has 2 stages of solid fuel, 1 stage of liquid fuel,
-and 1 stage of solid fuel to be tested. All other stages attribute to separators and
-the parachute. The craft file for the rocket can be found [here]().
+The craft file for the airplane can be found [here](hello_world_aircraft.craft).
 
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/KRPC_HelloWorld/images/2016-12-25.png "The rocket")
+![alt text](images/2017-01-09.png "The rocket")
 
 ## Results
 ----------
-Results would have been more or less the same as that of the earlier [Hello world]() example
-where I have plotted the results of various variables related to the rocket during
-flight, till the rocket gets stabilized at the desired speed.

@@ -67,7 +67,7 @@ if __name__ == "__main__":
     time_now = int(time.time())
     ingame_debug_text.content = "pitch - 0"
     while int(time.time()) < time_now + 1:
-        time.sleep(0.1) 
+        time.sleep(0.1)
         vessel.control.pitch = 0
 
     time.sleep(2)
