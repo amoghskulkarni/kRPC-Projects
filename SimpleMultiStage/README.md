@@ -18,7 +18,7 @@ An 8 stage rocket was built which has 2 stages of solid fuel, 1 stage of liquid 
 and 1 stage of solid fuel to be tested. All other stages attribute to separators and
 the parachute. The craft file for the rocket can be found [here](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/SimpleMultiStage/Hammer_solid_fuel_test_2.craft).
 
-![alt text](https://github.com/amoghskulkarni/kRPC-Projects/blob/master/SimpleMultiStage/images/2016-12-30.png "The rocket")
+![alt text](images/2016-12-30.png "The rocket")
 
 ## Results
 ----------
